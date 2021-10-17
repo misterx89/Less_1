@@ -8,13 +8,13 @@ import Foundation
 
 // 1. Решить квадратное уравнение
 
-let a:Float = 230
-let b:Float = 56
-let c:Float = 7
-var x1:Float
-var x2:Float
-var d:Float
-var discriminant:Float
+let a: Double = 230
+let b: Double = 56
+let c: Double = 7
+var x1: Double
+var x2: Double
+var d: Double
+var discriminant: Double
 
 d = b * b - (4 * a * c)
 
@@ -28,7 +28,7 @@ if d >= 0{
     print(d)
 }
 
-// 2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
+//  2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
 
 let katet1: Double = 10
 let katet2: Double = 9
@@ -40,4 +40,21 @@ perimeter = katet1 + katet2 + hippontenuse
 
 print("Периметр = \(perimeter)")
 print("Гипотенуза = \(hippontenuse)")
+
+//  3. Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
+
+var deposit: Double = 10000
+let percent: Double = 12.5
+let numberOfYears = 5
+var resultCash: Double
+var year = 1
+
+
+while year != numberOfYears + 1 {
+    resultCash = deposit + (deposit * percent)
+
+    print("Чрезе \(year) год/лет сумма вклада будет равна \(resultCash)")
+    year+=1
+    deposit = resultCash
+}
 
